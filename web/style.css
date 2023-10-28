@@ -1,199 +1,228 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 
-:root {
-  --primary-color: #391a3a;
-  --secondary-color:#343434;
-}
+  :root {
+    --primary-color: #391a3a;
+    --secondary-color:#343434;
+  }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
 
-body {
-  font-family: 'Raleway', sans-serif;
-  line-height: 1.54;
-  text-align: center;
-}
+  body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.54;
+    text-align: center;
+  }
 
-img {
-  width: 100%;
-  height: 170px;
-}
-
-
-.container {
-  max-width: 1200px;
-  padding: 0 1.5rem;
-  margin: auto;
-  overflow: hidden;
-}
-
-.btn {
-  text-decoration: none;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #fff;
-  margin-top: 4rem;
-  text-align: center;
-  display: inline-block;
-  padding: .6rem 1.5rem;
-  border-radius: 10px;
-  background-color: var(--primary-color);
-  transition: all .5s ease-in-out;
-}
-
-.btn:hover {
-  background-color: rgb(255, 0, 0);
-}
+  img {
+    width: 100%;
+    height: 170px;
+  }
 
 
-#about {
-  height: 100vh;
-  background: rgb(74, 82, 152);
-  background: linear-gradient(353deg, rgb(50, 52, 82) 0%, rgb(66, 56, 101) 93%); 
-}
+  .container {
+    max-width: 1200px;
+    padding: 0 1.5rem;
+    margin: auto;
+    overflow: hidden;
+  }
 
-#navbar {
-  background-color: var(--primary-color);
-  color: #fff;
-  padding: 0rem 3rem;
-  display: flex;
-  justify-content: flex-end;
-  position: fixed;
-  width: 100vw;
-}
+  .btn {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 4rem;
+    text-align: center;
+    display: inline-block;
+    padding: .6rem 1.5rem;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    transition: all .5s ease-in-out;
+  }
 
-#navbar ul {
-  list-style: none;
-  display: flex;
-}
+  .btn:hover {
+    background-color: rgb(255, 0, 0);
+  }
 
-#navbar ul a {
-  font-family: cursive;
-  display: inline-block;
-  padding: 1.2rem 2rem;
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.4rem;
-  font-weight: 500;
-  text-align: center;
-  line-height: 25px;
-  border-radius: 4px;
-}
 
-#navbar ul a:hover {
-    background-color: hsl(188, 63%, 37%);
-  color: rgb(109, 98, 98);
-}
+  #about {
+    height: 100vh;
+    background: rgb(74, 82, 152);
+    background: linear-gradient(353deg, rgb(50, 52, 82) 0%, rgb(66, 56, 101) 93%); 
+  }
 
-#about .container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  #navbar {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0rem 3rem;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100vw;
+  }
 
-.typewriter{
-  overflow: hidden;
-  white-space: nowrap;
-  animation: 
-    typing 4s steps(40,end),
-    blink-caret .5s step-end infinite;
-}
+  #navbar ul {
+    list-style: none;
+    display: flex;
+  }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-#title {
-    font-family: "Lucida Handwriting", "Courier New", cursive;
-  color: #fff;
-  font-size: 3.5rem;
-  font-weight: bolder;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.lead {
+  #navbar ul a {
     font-family: cursive;
-  font-size: 1.5rem;
-  color: #eee;
-  font-weight: 100;
-}
+    display: inline-block;
+    padding: 1.2rem 2rem;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 4px;
+  }
 
-#caption {
-  color: rgb(240, 248, 255);
-}
+  #navbar ul a:hover {
+      background-color: hsl(188, 63%, 37%);
+    color: rgb(109, 98, 98);
+  }
 
-#projects {
-  text-align: center;
-  width: 100%;
-  padding: 7rem .1rem;
-  background-color: var(--secondary-color);
-}
+  #about .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-#projects .projects {
-  padding: 0px 50px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-row-gap: 3rem;
-  grid-column-gap: 2rem;
-  margin-top: 2rem;
-}
+  .typewriter{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: 
+      typing 4s steps(40,end),
+      blink-caret .5s step-end infinite;
+  }
 
-#projects .container>h1 {
-  font-size: 2.6rem;
-  color: #fff;
-  font-weight: bolder;
-  text-transform: capitalize;
-  margin-bottom: .6rem;
-  line-height: 1.2;
-}
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
 
-#bottom-line {
-  height: 6px;
-  background-color: #fff;
-  width: 55%;
-  border-radius: 10px;
-  display: block;
-  margin: auto;
-  margin-bottom: 3rem;
-}
+  #title {
+      font-family: "Lucida Handwriting", "Courier New", cursive;
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: bolder;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
 
-#projects .projects .box {
-  background-color: #eee;
-  border: 5px solid #eee;
-  border-radius: 10px;
-}
+  .lead {
+      font-family: cursive;
+    font-size: 1.5rem;
+    color: #eee;
+    font-weight: 100;
+  }
 
-#projects .projects .box a {
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-}
+  #caption {
+    color: rgb(240, 248, 255);
+  }
 
-#projects .projects .box a p {
-  padding: 1.5rem;
-  font-size: 1.4rem;
-  font-weight: 700;
-  text-align: center;
-  color: #333;
-}
+  #projects {
+    text-align: center;
+    width: 100%;
+    padding: 7rem .1rem;
+    background-color: var(--secondary-color);
+  }
+
+  #projects .projects {
+    padding: 0px 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 3rem;
+    grid-column-gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  #projects .container>h1 {
+    font-size: 2.6rem;
+    color: #fff;
+    font-weight: bolder;
+    text-transform: capitalize;
+    margin-bottom: .6rem;
+    line-height: 1.2;
+  }
+
+  #bottom-line {
+    height: 6px;
+    background-color: #fff;
+    width: 55%;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    margin-bottom: 3rem;
+  }
+
+  #projects .projects .box {
+    background-color: #eee;
+    border: 5px solid #eee;
+    border-radius: 10px;
+  }
+
+  #projects .projects .box a {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  #projects .projects .box a p {
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+  }
 
 
-.code {
-  color: #eee;
-  transition: .5s all ease;
-  font-size: 1.6rem;
-}
+  .code {
+    color: #eee;
+    transition: .5s all ease;
+    font-size: 1.6rem;
+  }
 
-#projects .projects .box:hover .code {
-  color: var(--primary-color);
-}
+  #projects .projects .box:hover .code {
+    color: var(--primary-color);
+  }
 
+  .project-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .project-details {
+    margin: 0px 0;
+    padding: 30px  ;
+    background-color: #2a1c07;
+    font-family: cursive;
+    font-size: 1.5rem;
+    color: #eee;
+    font-weight: 100; 
+  }
+
+  .arduino {
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  }
+  .long{
+    margin: 0px 0;
+    padding: 30px  ;
+    background-color: #052b42;
+    font-family: cursive;
+    font-size: 1.4rem;
+    color: #eee;
+    font-weight: 100; 
+  }
