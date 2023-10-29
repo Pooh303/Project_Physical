@@ -151,13 +151,6 @@
     text-decoration: none;
   }
 
-  #projects .projects .box a p {
-    padding: 1.5rem;
-    font-size: 1.4rem;
-    font-weight: 700;
-    text-align: center;
-    color: #333;
-  }
 
   .code {
     color: #eee;

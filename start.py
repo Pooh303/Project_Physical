@@ -31,7 +31,7 @@ serial_inst.open()
 
 
 #ดึงวิดีโอตัวอย่างเข้ามา, ถ้าต้องการใช้webcamให้ใส่เป็น0
-video_capture = cv2.VideoCapture(0)
+video_capture = cv2.VideoCapture(1)
 
 # โหลดรูปภาพใบหน้าที่คุณต้องการรู้จำ
 bike_image = face.load_image_file("Train/bike/bike.jpg")
@@ -118,6 +118,7 @@ while True:
             if name == "UNKNOWN":
                 print(name)
                 color = [46,2,209]
+                sendCommand("UNKNOWN")
             else:
                 print(name)
                 color = [255,102,51]
@@ -139,7 +140,7 @@ while True:
         #สลับค่าเป็นค่าตรงข้ามเพื่อให้คิดเฟรมเว้นเฟรม
         process_this_frame = not process_this_frame
 
-        #แสดงผลลัพท์ออกมา
+        # แสดงผลลัพท์ออกมา
         # cv2.imshow("Video", frame)
         # if cv2.waitKey(200) & 0xFF == ord('q'):
         #     break
