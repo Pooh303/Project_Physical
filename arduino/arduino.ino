@@ -31,6 +31,7 @@ void setup() {
   pinMode(4, OUTPUT); // Trig pin
   pinMode(2, INPUT);  // Echo pin
 
+
 }
 
 void loop() {
@@ -59,11 +60,17 @@ void loop() {
   // ================================
     else if (msg == "DREAM"){
       checkBolb("65070182");
+      checkBolb("65070182");
     }
     else if (msg == "MEAN"){
       checkBolb("65070197");
+      checkBolb("65070197");
     }
     else if (msg == "BIKE"){
+      checkBolb("65070215");
+    }
+    else{
+      checkBolb("UNKNOWN");
       checkBolb("65070215");
     }
     else{
@@ -97,6 +104,7 @@ void displayname(String msg, int time){
 
 void checkBolb(String msg){
   if (distance < 150 && !personDetected) // Adjust the threshold distance as needed
+  if (distance < 150 && !personDetected) // Adjust the threshold distance as needed
     {
       if (msg != "UNKNOWN"){
         digitalWrite(Blue_pin, HIGH);
@@ -114,7 +122,24 @@ void checkBolb(String msg){
         digitalWrite(RED_pin, HIGH);
         displayname(msg, 4000);
       }
+      if (msg != "UNKNOWN"){
+        digitalWrite(Blue_pin, HIGH);
+        digitalWrite(RED_pin, LOW);
+        displayname(msg, 6000);
+        digitalWrite(Blue_pin, LOW);
+        digitalWrite(RED_pin, HIGH);
+        personDetected = true;
+      } else {
+        digitalWrite(RED_pin, LOW);
+        delay(400);
+        digitalWrite(RED_pin, HIGH);
+        digitalWrite(RED_pin, LOW);
+        delay(400);
+        digitalWrite(RED_pin, HIGH);
+        displayname(msg, 4000);
+      }
     }
+    else if (distance > 10 && personDetected)
     else if (distance > 10 && personDetected)
     {
       personDetected = false;

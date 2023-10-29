@@ -170,7 +170,7 @@
   .project-des {
     margin: 0px 0;
     padding: 30px  ;
-    padding-top: 5%;
+    padding-top: 8%;
     background-color: rgb(89, 43, 255);
     font-family: 'IBM rgb(255, 160, 17)ns Thai Looped', sans-serif;
     font-family: 'Itim', cursive;
@@ -184,7 +184,7 @@
   .demo {
     margin: 0px 0;
     padding: 30px  ;
-    padding: 5%;
+    padding: 6%;
     height: 1000px;
     background-color: rgb(89, 43, 255);
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
@@ -254,4 +254,18 @@
 
   .profile-img{
     object-fit: cover;
+  }
+
+  #members h3{
+    padding-top: 6%;
+    font-size: 40px;
+    margin: auto;
+  }
+
+  .profile-img{
+    border-radius: 10px;
+  }
+
+  .column{
+    padding: 20px;
   }
