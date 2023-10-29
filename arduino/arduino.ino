@@ -1,6 +1,7 @@
 #include <Wire.h>
 #include <LCD.h>
 #include <LiquidCrystal_I2C.h>
+#include <TimeLib.h>
 
 #define I2C_ADDR 0x27
 #define BACKLIGHT_PIN 3
@@ -69,21 +70,22 @@ void loop() {
   }
 }
 
-void displayname(String msg){
-  lcd.clear();
-  lcd.setCursor(0, 0);
-  lcd.print(msg);
-  delay(5000);
-  lcd.clear();
-  personDetected = false;
-}
+// void displayname(String msg){
+//   lcd.clear();
+//   lcd.setCursor(0, 0);
+//   lcd.print(msg);
+//   lcd.print(getTime());
+//   delay(5000);
+//   lcd.clear();
+//   personDetected = false;
+// }
 
 void checkBolb(String msg){
   if (distance < 100 && !personDetected) // Adjust the threshold distance as needed
     {
       digitalWrite(Blue_pin, HIGH);
       digitalWrite(RED_pin, LOW);
-      displayname(msg);
+      scrollText(msg, 300);
       digitalWrite(Blue_pin, LOW);
       digitalWrite(RED_pin, HIGH);
       personDetected = true;
@@ -94,3 +96,36 @@ void checkBolb(String msg){
     }
 }
 
+void scrollText(String text, int scrollDelay) {
+  int textLength = text.length();
+  int displayLength = 16;
+
+  while (true) {
+    for (int i = 0; i < textLength + displayLength; i++) {
+      lcd.clear();
+      int startPos = i % (textLength + displayLength - 16);
+      if (startPos < 0) {
+        startPos = 0;
+      }
+      lcd.setCursor(0, 0);
+      lcd.print(text.substring(startPos, startPos + displayLength));
+      delay(scrollDelay);
+    }
+  }
+}
+
+
+
+String getTime() {
+  time_t currentTime = now(); // Get current time
+
+  int currentHour = hour(currentTime);
+  int currentMinute = minute(currentTime);
+  int currentSecond = second(currentTime);
+
+  // Format the time as "HH:MM:SS"
+  char buffer[9]; // HH:MM:SS + null terminator
+  snprintf(buffer, sizeof(buffer), "%02d:%02d:%02d", currentHour, currentMinute, currentSecond);
+
+  return String(buffer);
+}
